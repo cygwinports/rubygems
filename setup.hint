@@ -1,0 +1,5 @@
+category: Ruby
+requires: cygwin ruby
+sdesc: "Centralized Ruby extension management system"
+ldesc: "Centralized Ruby extension management system, 
+similar to Perl's CPAN"

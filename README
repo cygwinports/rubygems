@@ -1,0 +1,125 @@
+rubygems
+-------------------------------------------
+Centralized Ruby extension management system, 
+similar to Perl's CPAN.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  ruby-1.8.5-2
+
+Canonical homepage:
+  http://docs.rubygems.org/
+
+Canonical download:
+  http://rubyforge.org/projects/rubygems/
+
+-------------------------------------------
+
+Build instructions:
+  unpack rubygems-0.9.3-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./rubygems-0.9.3-1.cygport all
+
+This will create:
+  /usr/src/rubygems-0.9.3-1-src.tar.bz2
+  /usr/src/rubygems-0.9.3-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/gem
+  /usr/bin/gem_mirror
+  /usr/bin/gem_server
+  /usr/bin/gemlock
+  /usr/bin/gemri
+  /usr/bin/gemwhich
+  /usr/bin/index_gem_repository.rb
+  /usr/bin/update_rubygems
+  /usr/lib/ruby/gems/1.8/cache/sources-0.0.1.gem
+  /usr/lib/ruby/gems/1.8/doc/rubygems-0.8.11/rdoc/*/*/*/*
+  /usr/lib/ruby/gems/1.8/doc/rubygems-0.8.11/ri/*/*/*/*
+  /usr/lib/ruby/gems/1.8/gems/sources-0.0.1/lib/sources.rb
+  /usr/lib/ruby/gems/1.8/specifications/sources-0.0.1.gemspec
+  /usr/lib/ruby/site_ruby/1.8/gemconfigure.rb
+  /usr/lib/ruby/site_ruby/1.8/rbconfig/datadir.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/builder.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/command_manager.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/build_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/cert_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/check_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/cleanup_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/contents_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/dependency_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/environment_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/help_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/install_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/list_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/outdated_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/pristine_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/query_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/rdoc_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/search_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/sources_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/specification_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/uninstall_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/unpack_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/commands/update_command.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/config_file.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/dependency_list.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/digest/digest_adapter.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/digest/md5.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/digest/sha1.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/digest/sha2.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/doc_manager.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/format.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/gem_commands.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/gem_open_uri.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/gem_openssl.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/gem_runner.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/installer.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/old_format.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/open-uri.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/package.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/remote_fetcher.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/remote_installer.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/rubygems_version.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/security.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/server.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/source_index.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/source_info_cache.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/source_info_cache_entry.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/specification.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/timer.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/user_interaction.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/validator.rb
+  /usr/lib/ruby/site_ruby/1.8/rubygems/version.rb
+  /usr/lib/ruby/site_ruby/1.8/ubygems.rb
+  /usr/share/doc/Cygwin/rubygems-0.9.3.README
+  /usr/share/doc/rubygems-0.9.3/ChangeLog
+  /usr/share/doc/rubygems-0.9.3/GPL.txt
+  /usr/share/doc/rubygems-0.9.3/LICENSE.txt
+  /usr/share/doc/rubygems-0.9.3/README
+  /usr/share/doc/rubygems-0.9.3/TODO
+
+------------------
+
+Port Notes:
+
+----- version 0.9.3-1 -----
+Major version bump, built with cygport.
+
+----- version 0.8.11-1 -----
+Version bump.
+
+----- version 0.8.10-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
