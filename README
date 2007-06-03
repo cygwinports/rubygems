@@ -5,7 +5,7 @@ similar to Perl's CPAN.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  ruby-1.8.5-2
+  ruby-1.8.6-1
 
 Canonical homepage:
   http://docs.rubygems.org/
@@ -16,15 +16,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack rubygems-0.9.3-1-src.tar.bz2
+  unpack rubygems-0.9.4-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./rubygems-0.9.3-1.cygport all
+  cygport ./rubygems-0.9.4-1.cygport all
 
 This will create:
-  /usr/src/rubygems-0.9.3-1-src.tar.bz2
-  /usr/src/rubygems-0.9.3-1.tar.bz2
+  /usr/src/rubygems-0.9.4-1-src.tar.bz2
+  /usr/src/rubygems-0.9.4-1.tar.bz2
 
 -------------------------------------------
 
@@ -39,8 +39,8 @@ Files included in the binary package:
   /usr/bin/index_gem_repository.rb
   /usr/bin/update_rubygems
   /usr/lib/ruby/gems/1.8/cache/sources-0.0.1.gem
-  /usr/lib/ruby/gems/1.8/doc/rubygems-0.8.11/rdoc/*/*/*/*
-  /usr/lib/ruby/gems/1.8/doc/rubygems-0.8.11/ri/*/*/*/*
+  /usr/lib/ruby/gems/1.8/doc/rubygems-0.9.3/rdoc/*/*/*/*
+  /usr/lib/ruby/gems/1.8/doc/rubygems-0.9.3/ri/*/*/*/*
   /usr/lib/ruby/gems/1.8/gems/sources-0.0.1/lib/sources.rb
   /usr/lib/ruby/gems/1.8/specifications/sources-0.0.1.gemspec
   /usr/lib/ruby/site_ruby/1.8/gemconfigure.rb
@@ -100,16 +100,19 @@ Files included in the binary package:
   /usr/lib/ruby/site_ruby/1.8/rubygems/validator.rb
   /usr/lib/ruby/site_ruby/1.8/rubygems/version.rb
   /usr/lib/ruby/site_ruby/1.8/ubygems.rb
-  /usr/share/doc/Cygwin/rubygems-0.9.3.README
-  /usr/share/doc/rubygems-0.9.3/ChangeLog
-  /usr/share/doc/rubygems-0.9.3/GPL.txt
-  /usr/share/doc/rubygems-0.9.3/LICENSE.txt
-  /usr/share/doc/rubygems-0.9.3/README
-  /usr/share/doc/rubygems-0.9.3/TODO
+  /usr/share/doc/Cygwin/rubygems-0.9.4.README
+  /usr/share/doc/rubygems-0.9.4/ChangeLog
+  /usr/share/doc/rubygems-0.9.4/GPL.txt
+  /usr/share/doc/rubygems-0.9.4/LICENSE.txt
+  /usr/share/doc/rubygems-0.9.4/README
+  /usr/share/doc/rubygems-0.9.4/TODO
 
 ------------------
 
 Port Notes:
+
+----- version 0.9.4-1 -----
+Version bump.
 
 ----- version 0.9.3-1 -----
 Major version bump, built with cygport.
