@@ -1,0 +1,15 @@
+inherit ruby
+
+DESCRIPTION="Ruby module management system"
+HOMEPAGE="http://docs.rubygems.org/"
+SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
+PATCH_URI="mirror://portage/dev-ruby/${PN}/files/${P}-setup.patch"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	export GEM_HOME=${D}/usr/lib/ruby/gems/${RUBY_VERSION}
+	keepdir /usr/lib/ruby/gems/${RUBY_VERSION}/{doc,gems,cache,specifications}
+	${RUBY} setup.rb --no-rdoc --no-ri --prefix=${D} || error "setup.rb failed"
+}

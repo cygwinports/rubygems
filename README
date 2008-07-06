@@ -4,7 +4,7 @@ Centralized Ruby extension management system,
 similar to Perl's CPAN.
 
 Runtime requirements:
-  ruby-1.8.6_p114-1
+  ruby-1.8.6_p114-2
 
 Canonical homepage:
   http://docs.rubygems.org/
@@ -15,15 +15,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack rubygems-1.1.1-1-src.tar.bz2
+  unpack rubygems-1.2.0-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./rubygems-1.1.1-1.cygport all
+  cygport ./rubygems-1.2.0-1.cygport all
 
 This will create:
-  /usr/src/rubygems-1.1.1-1-src.tar.bz2
-  /usr/src/rubygems-1.1.1-1.tar.bz2
+  /usr/src/rubygems-1.2.0-1-src.tar.bz2
+  /usr/src/rubygems-1.2.0-1.tar.bz2
 
 -------------------------------------------
 
@@ -123,15 +123,18 @@ Files included in the binary package:
   /usr/lib/ruby/site_ruby/1.8/rubygems/version.rb
   /usr/lib/ruby/site_ruby/1.8/rubygems/version_option.rb
   /usr/lib/ruby/site_ruby/1.8/ubygems.rb
-  /usr/share/doc/rubygems-1.1.1/ChangeLog
-  /usr/share/doc/rubygems-1.1.1/GPL.txt
-  /usr/share/doc/rubygems-1.1.1/LICENSE.txt
-  /usr/share/doc/rubygems-1.1.1/README
-  /usr/share/doc/rubygems-1.1.1/TODO
+  /usr/share/doc/rubygems-1.2.0/ChangeLog
+  /usr/share/doc/rubygems-1.2.0/GPL.txt
+  /usr/share/doc/rubygems-1.2.0/LICENSE.txt
+  /usr/share/doc/rubygems-1.2.0/README
+  /usr/share/doc/rubygems-1.2.0/TODO
 
 ------------------
 
 Port Notes:
+
+----- version 1.2.0-1 -----
+Version bump.
 
 ----- version 1.1.1-1 -----
 Version bump.
