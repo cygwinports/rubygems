@@ -1,6 +1,8 @@
 inherit ruby
 
-DESCRIPTION="Ruby module management system"
+CATEGORY="Ruby"
+SUMMARY="Ruby module management system"
+DESCRIPTION="A centralized Ruby extension management system, similar to Perl's CPAN"
 HOMEPAGE="http://docs.rubygems.org/"
 SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
