@@ -1,10 +1,13 @@
 inherit ruby
 
+NAME="rubygems"
+VERSION=1.8.24
+RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby module management system"
 DESCRIPTION="A centralized Ruby extension management system, similar to Perl's CPAN"
 HOMEPAGE="http://docs.rubygems.org/"
-SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
+SRC_URI="mirror://rubyforge/${NAME}/${NAME}-${VERSION}.tgz"
 
 src_compile() { :; }
 
