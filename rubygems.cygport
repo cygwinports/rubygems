@@ -1,20 +1,25 @@
 inherit ruby
 
 NAME="rubygems"
-VERSION=1.8.24
+VERSION=2.4.1
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby module management system"
 DESCRIPTION="A centralized Ruby extension management system, similar to Perl's CPAN"
 HOMEPAGE="http://docs.rubygems.org/"
-SRC_URI="mirror://rubyforge/${NAME}/${NAME}-${VERSION}.tgz"
+SRC_URI="http://production.cf.rubygems.org/rubygems/${NAME}-${VERSION}.tgz"
+PATCH_URI="2.4.1-cygwin.patch"
+
+REQUIRES="ca-certificates"
 
 src_compile() { :; }
 
 src_install() {
 	cd ${S}
-	export GEM_HOME=${D}/usr/lib/ruby/gems/${RUBY_VERSION}
-	keepdir /usr/lib/ruby/gems/${RUBY_VERSION}/{gems,cache,specifications}
+	export GEM_HOME=${D}/usr/share/gems/
 	${RUBY} setup.rb --vendor --destdir=${D} || error "setup.rb install failed"
-	rm -f ${D}/usr/bin/gem.bat
+
+	mv ${D}${RUBY_VENDORLIB} ${D}/usr/share/rubygems
+
+	rm -f ${D}/usr/share/rubygems/rubygems/ssl_certs/*
 }
