@@ -10,6 +10,8 @@ HOMEPAGE="http://docs.rubygems.org/"
 SRC_URI="http://production.cf.rubygems.org/rubygems/${NAME}-${VERSION}.tgz"
 PATCH_URI="2.4.1-cygwin.patch"
 
+ARCH=noarch
+
 PKG_NAMES="${NAME} ${NAME}-doc"
 rubygems_REQUIRES="ca-certificates"
 rubygems_CONTENTS="usr/bin/ usr/share/doc/ usr/share/rubygems/"
