@@ -1,7 +1,7 @@
 inherit ruby
 
 NAME="rubygems"
-VERSION=2.4.1
+VERSION=2.4.7
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby module management system"

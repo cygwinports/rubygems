@@ -100,7 +100,7 @@
 +        dirs = Gem.default_dirs.detect {|location, paths| paths[:gem_dir] == base_dir}
 +        dirs && dirs.last[:ext_dir]
 +      end
-+      dir && File.join(dir, RbConfig::CONFIG['RUBY_INSTALL_NAME'], RUBY_VERSION)
++      dir && File.join(dir, RbConfig::CONFIG['RUBY_INSTALL_NAME'], File.basename(RbConfig::CONFIG['vendorarchdir']))
 +    end
 +
 +    # This method should be available since RubyGems 2.2 until RubyGems 3.0.
