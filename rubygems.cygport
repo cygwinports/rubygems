@@ -1,15 +1,14 @@
 inherit ruby
 
 NAME="rubygems"
-VERSION=2.6.11
+VERSION=2.6.13
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby module management system"
 DESCRIPTION="A centralized Ruby extension management system, similar to Perl's CPAN"
-HOMEPAGE="http://docs.rubygems.org/"
+HOMEPAGE="http://rubygems.org/"
 SRC_URI="http://production.cf.rubygems.org/rubygems/${NAME}-${VERSION}.tgz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/rpms/ruby.git/plain/ruby-2.3.3-Revert-use-frozen-strings-in-serialized-specs.patch?h=f25
 	2.4.1-cygwin.patch
 "
 
