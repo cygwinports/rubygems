@@ -1,32 +1,47 @@
 inherit ruby
 
 NAME="rubygems"
-VERSION=2.6.13
+VERSION=3.0.3
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby module management system"
 DESCRIPTION="A centralized Ruby extension management system, similar to Perl's CPAN"
 HOMEPAGE="http://rubygems.org/"
 SRC_URI="http://production.cf.rubygems.org/rubygems/${NAME}-${VERSION}.tgz"
-PATCH_URI="
-	2.4.1-cygwin.patch
-"
+SRC_URI+=" operating_system.rb"
+PATCH_URI="2.4.1-cygwin.patch"
 
 ARCH=noarch
 
 PKG_NAMES="${NAME} ${NAME}-doc"
 rubygems_REQUIRES="ca-certificates"
-rubygems_CONTENTS="usr/bin/ usr/share/doc/ usr/share/rubygems/"
+rubygems_CONTENTS="usr/bin/gem usr/share/doc/ usr/share/rubygems/"
 rubygems_doc_CONTENTS="usr/share/gems/doc/"
+
+DIFF_EXCLUDES="bundler.gemspec"
+DEPS_PATH="/usr/share/rubygems"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	mkdir -p lib/rubygems/defaults/
+	mv operating_system.rb lib/rubygems/defaults/
+}
 
 src_compile() { :; }
 
 src_install() {
 	cd ${S}
+	dodir /usr/share/gems
 	export GEM_HOME=${D}/usr/share/gems/
 	${RUBY} setup.rb --vendor --destdir=${D} || error "setup.rb install failed"
 
 	mv ${D}${RUBY_VENDORLIB} ${D}/usr/share/rubygems
+
+	# bundler is now a default part of ruby
+	rm -f ${D}/usr/bin/bundle*
+	rm -f ${D}/usr/share/gems/specifications/default/bundler-*.gemspec
+	rm -fr ${D}${D}/usr/share/gems/specifications/gems/bundler-*/
+	rm -fr ${D}/usr/share/rubygems/bundler*
 
 	rm -fr ${D}/usr/share/rubygems/rubygems/ssl_certs/
 }
